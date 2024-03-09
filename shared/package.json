@@ -1,0 +1,33 @@
+{
+  "name": "@kraaft/shared",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "==> LINT / FORMAT <==": "",
+    "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:biome": "biome lint .",
+    "lint:eslint:fix": "pnpm lint:eslint --fix",
+    "lint:biome:fix": "pnpm lint:biome --apply",
+    "lint": "pnpm lint:biome && pnpm lint:eslint",
+    "lint:fix": "pnpm lint:biome:fix && pnpm lint:eslint:fix && pnpm format",
+    "format": "biome format . --write",
+    "==> CLEAN <==": "",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "@kraaft/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.0",
+    "@kraaft/biome-config": "workspace:*",
+    "@kraaft/eslint-config": "workspace:*",
+    "@kraaft/tsconfig": "workspace:*",
+    "eslint": "^8.19.0",
+    "typescript": "^5.4.2"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*"
+  }
+}
