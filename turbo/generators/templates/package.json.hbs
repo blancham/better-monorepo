@@ -1,13 +1,13 @@
 {
-  "name": "@kraaft/app-web",
+  "name": "@kraaft/{{ name }}",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
-    "==> RUN <==": "",
-    "start": "vite",
-    "==> BUILD <==": "",
-    "build": "tsc && vite build",
     "==> LINT / FORMAT <==": "",
     "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint:biome": "biome lint src",
@@ -19,32 +19,12 @@
     "==> CLEAN <==": "",
     "clean": "rm -rf node_modules .turbo"
   },
-  "dependencies": {
-    "@kraaft/shared": "workspace:*",
-    "@kraaft/ui": "workspace:*",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-native-web": "^0.19.10"
-  },
   "devDependencies": {
     "@biomejs/biome": "1.6.0",
     "@kraaft/biome-config": "workspace:*",
     "@kraaft/eslint-config": "workspace:*",
     "@kraaft/tsconfig": "workspace:*",
-    "@types/node": "^20.11.25",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.18",
-    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.19.0",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.5"
-  },
-  "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "typescript": "^5.4.2"
   }
 }

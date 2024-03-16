@@ -18,7 +18,7 @@
     "lint:fix": "pnpm lint:biome:fix && pnpm lint:eslint:fix && pnpm format",
     "format": "biome format . --write",
     "==> CLEAN <==": "",
-    "clean": "rm -rf node_modules",
+    "clean": "rm -rf node_modules .turbo",
     "==> HELPER <==": "",
     "ios:pod": "pnpm dlx pod-install ios",
     "ios:xcode": "xed ios"

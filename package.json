@@ -11,10 +11,10 @@
     "lint:workspaces": "pnpm -r lint",
     "lint:fix:workspaces": "pnpm -r lint:fix",
     "format": "biome format . --config-path biome --write",
-    "format:workspaces": "pnpm format && pnpm -r format",
+    "format:workspaces": "turbo format",
     "==> CLEAN <==": "",
-    "clean": "rm -rf node_modules",
-    "clean:workspaces": "pnpm clean && pnpm -r clean",
+    "clean": "rm -rf node_modules .turbo",
+    "clean:workspaces": "turbo clean",
     "==> HELPER <==": "",
     "mobile:ios:xcode": "pnpm mobile ios:xcode",
     "==> WORKSPACES <==": "",
@@ -23,7 +23,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.0",
-    "@kraaft/biome-config": "workspace:*"
+    "@kraaft/biome-config": "workspace:*",
+    "@turbo/gen": "^1.12.5",
+    "turbo": "^1.12.5"
   },
   "packageManager": "pnpm@8.15.4"
 }
