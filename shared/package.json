@@ -15,7 +15,7 @@
     "lint:fix": "pnpm lint:biome:fix && pnpm lint:eslint:fix && pnpm format",
     "format": "biome format . --write",
     "==> CLEAN <==": "",
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf node_modules .turbo"
   },
   "dependencies": {
     "@playground/ui": "workspace:*"

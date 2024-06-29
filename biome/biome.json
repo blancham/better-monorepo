@@ -2,6 +2,12 @@
   "$schema": "https://biomejs.dev/schemas/1.6.0/schema.json",
   "extends": ["../node_modules/@playground/biome-config/base.json"],
   "files": {
-    "include": ["package.json", "tsconfig.json", "tooling/*.json", ".vscode"]
+    "include": [
+      "package.json",
+      "tsconfig.json",
+      "tooling/*.json",
+      ".vscode",
+      "turbo"
+    ]
   }
 }

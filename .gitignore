@@ -3,6 +3,9 @@ node_modules
 node_modules/**
 **/node_modules/**
 
+# turbo
+.turbo
+
 # misc
 .DS_Store
 .idea

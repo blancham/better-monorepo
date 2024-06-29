@@ -5,7 +5,7 @@
   "license": "MIT",
   "files": ["base.js"],
   "scripts": {
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf node_modules .turbo"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.5",

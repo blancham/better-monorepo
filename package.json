@@ -7,14 +7,16 @@
     "==> RUN <==": "",
     "start:web": "pnpm web start",
     "start:mobile": "pnpm mobile start",
+    "==> TYPECHECK <==": "",
+    "typecheck:workspaces": "turbo typecheck",
     "==> LINT / FORMAT <==": "",
     "lint:workspaces": "pnpm -r lint",
     "lint:fix:workspaces": "pnpm -r lint:fix",
     "format": "biome format . --config-path biome --write",
-    "format:workspaces": "pnpm format && pnpm -r format",
+    "format:workspaces": "turbo format",
     "==> CLEAN <==": "",
-    "clean": "rm -rf node_modules",
-    "clean:workspaces": "pnpm clean && pnpm -r clean",
+    "clean": "rm -rf node_modules .turbo",
+    "clean:workspaces": "turbo clean",
     "==> HELPER <==": "",
     "mobile:ios:xcode": "pnpm mobile ios:xcode",
     "==> WORKSPACES <==": "",
@@ -23,7 +25,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.0",
-    "@playground/biome-config": "workspace:*"
+    "@playground/biome-config": "workspace:*",
+    "@turbo/gen": "^2.0.6",
+    "turbo": "^2.0.6"
   },
   "packageManager": "pnpm@8.15.4"
 }
