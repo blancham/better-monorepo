@@ -1,0 +1,53 @@
+{
+  "name": "@playground/app-web",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "==> RUN <==": "",
+    "start": "vite",
+    "==> BUILD <==": "",
+    "build": "tsc && vite build",
+    "==> TYPECHECK <==": "",
+    "typecheck": "tsc --noEmit",
+    "==> LINT / FORMAT <==": "",
+    "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:biome": "biome lint src",
+    "lint:eslint:fix": "pnpm lint:eslint --fix",
+    "lint:biome:fix": "pnpm lint:biome --apply",
+    "lint": "pnpm lint:biome && pnpm lint:eslint",
+    "lint:fix": "pnpm lint:biome:fix && pnpm lint:eslint:fix && pnpm format",
+    "format": "biome format . --write",
+    "==> CLEAN <==": "",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "@playground/shared": "workspace:*",
+    "@playground/ui": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native-web": "^0.19.10"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.0",
+    "@playground/biome-config": "workspace:*",
+    "@playground/eslint-config": "workspace:*",
+    "@playground/tsconfig": "workspace:*",
+    "@types/node": "^20.11.25",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.19.0",
+    "tsconfck": "^3.1.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

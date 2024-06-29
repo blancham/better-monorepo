@@ -1,0 +1,17 @@
+{
+  "extends": ["@playground/tsconfig/base"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "moduleSuffixes": [".web", ""],
+
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "noEmit": true,
+    "allowJs": true
+  },
+  "include": ["src", "vite-plugins", ".eslintrc.js"]
+}

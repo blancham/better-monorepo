@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "isBackground": true,
+      "label": "start:web",
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "type": "shell",
+      "command": "pnpm --filter @playground/app-web start",
+      "icon": {
+        "id": "debug-start",
+        "color": "terminal.ansiGreen"
+      },
+      "problemMatcher": ["$tsc-watch"]
+    },
+    {
+      "isBackground": true,
+      "label": "start:mobile",
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "type": "shell",
+      "command": "pnpm --filter @playground/app-mobile start",
+      "icon": {
+        "id": "debug-start",
+        "color": "terminal.ansiGreen"
+      },
+      "problemMatcher": ["$tsc-watch"]
+    }
+  ]
+}

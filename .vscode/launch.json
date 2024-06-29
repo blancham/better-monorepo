@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "start:web:chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/apps/web",
+      "preLaunchTask": "start:web"
+    },
+    {
+      "type": "reactnativedirect",
+      "request": "launch",
+      "name": "start:mobile:ios",
+      "platform": "ios",
+      "target": "iPhone 15",
+      "port": 9221,
+      "cwd": "${workspaceFolder}/apps/mobile",
+      "preLaunchTask": "start:mobile"
+    },
+    {
+      "type": "reactnativedirect",
+      "request": "launch",
+      "name": "start:mobile:android",
+      "platform": "android",
+      "port": 8081,
+      "cwd": "${workspaceFolder}/apps/mobile",
+      "preLaunchTask": "start:mobile"
+    }
+  ]
+}

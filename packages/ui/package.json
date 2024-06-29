@@ -1,0 +1,37 @@
+{
+  "name": "@playground/ui",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "==> LINT / FORMAT <==": "",
+    "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:biome": "biome lint src",
+    "lint:eslint:fix": "pnpm lint:eslint --fix",
+    "lint:biome:fix": "pnpm lint:biome --apply",
+    "lint": "pnpm lint:biome && pnpm lint:eslint",
+    "lint:fix": "pnpm lint:biome:fix && pnpm lint:eslint:fix && pnpm format",
+    "format": "biome format . --write",
+    "==> CLEAN <==": "",
+    "clean": "rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.0",
+    "@playground/biome-config": "workspace:*",
+    "@playground/eslint-config": "workspace:*",
+    "@playground/tsconfig": "workspace:*",
+    "eslint": "^8.19.0",
+    "typescript": "^5.4.2"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-web": "*"
+  }
+}
