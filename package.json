@@ -24,10 +24,10 @@
     "mobile": "pnpm --filter @playground/app-mobile"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.0",
+    "@biomejs/biome": "1.9.4",
     "@playground/biome-config": "workspace:*",
     "@turbo/gen": "^2.0.6",
     "turbo": "^2.0.6"
   },
-  "packageManager": "pnpm@8.15.4"
+  "packageManager": "pnpm@9.15.1"
 }

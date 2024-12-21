@@ -1,4 +1,3 @@
-import type React from "react";
 import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
 
 import { Button } from "@playground/ui";

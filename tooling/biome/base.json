@@ -16,7 +16,9 @@
       "complexity": {
         "noBannedTypes": "error"
       },
-      "correctness": {},
+      "correctness": {
+        "noUnusedImports": "error"
+      },
       "performance": {},
       "security": {},
       "style": {

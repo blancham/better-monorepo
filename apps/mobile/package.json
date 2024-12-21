@@ -8,7 +8,7 @@
     "start": "react-native start",
     "==> BUILD <==": "",
     "run:android": "react-native run-android",
-    "run:ios": "react-native run-ios --simulator \"iPhone 15\"",
+    "run:ios": "react-native run-ios --simulator \"iPhone 16 Pro Max\"",
     "==> TYPECHECK <==": "",
     "typecheck": "tsc --noEmit",
     "==> LINT / FORMAT <==": "",
@@ -24,29 +24,37 @@
     "==> HELPER <==": "",
     "ios:clean": "rm -rf ios/Pods ios/build",
     "ios:pod": "pnpm dlx pod-install ios",
-    "ios:xcode": "xed ios"
+    "ios:pod:force": "pnpm ios:clean && pnpm ios:pod",
+    "ios:xcode": "xed ios",
+    "android:clean": "cd android ; ./gradlew clean"
   },
   "dependencies": {
     "@playground/shared": "workspace:*",
     "@playground/ui": "workspace:*",
-    "@react-native-community/cli-platform-android": "^12.3.6",
-    "react": "18.2.0",
-    "react-native": "0.74.2"
+    "react": "18.3.1",
+    "react-native": "0.76.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.0",
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0",
-    "@babel/runtime": "^7.20.0",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
+    "@biomejs/biome": "1.9.4",
     "@playground/biome-config": "workspace:*",
     "@playground/eslint-config": "workspace:*",
     "@playground/tsconfig": "workspace:*",
-    "@react-native/babel-preset": "0.74.84",
-    "@react-native/metro-config": "0.74.84",
-    "@rnx-kit/metro-config": "^1.3.15",
-    "@rnx-kit/metro-resolver-symlinks": "^0.1.36",
+    "@react-native-community/cli": "15.0.1",
+    "@react-native-community/cli-platform-android": "15.0.1",
+    "@react-native-community/cli-platform-ios": "15.0.1",
+    "@react-native/babel-preset": "0.76.5",
+    "@react-native/metro-config": "0.76.5",
+    "@react-native/typescript-config": "0.76.5",
     "@types/react": "^18.2.6",
-    "eslint": "^8.19.0",
-    "typescript": "^5.4.2"
+    "@rnx-kit/metro-config": "^2.0.1",
+    "@rnx-kit/metro-resolver-symlinks": "^0.2.1",
+    "eslint": "^9.14.0",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
