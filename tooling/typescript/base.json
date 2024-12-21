@@ -9,6 +9,8 @@
     "noImplicitAny": true,
     "noUncheckedIndexedAccess": true,
     "useUnknownInCatchVariables": false,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
 
     "sourceMap": true,
     "declaration": true,

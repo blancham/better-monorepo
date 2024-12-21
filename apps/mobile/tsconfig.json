@@ -1,17 +1,13 @@
 {
-  "extends": ["@playground/tsconfig/base"],
+  "extends": [
+    "@playground/tsconfig/base",
+    "@react-native/typescript-config/tsconfig.json"
+  ],
   "compilerOptions": {
     "jsx": "react-native",
     "types": ["react-native"],
     "lib": ["esnext"],
-    "moduleSuffixes": [".native", ""],
-
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-
-    "noEmit": true,
-    "allowJs": true
+    "moduleSuffixes": [".native", ""]
   },
   "include": ["src", "index.js", ".eslintrc.js"]
 }

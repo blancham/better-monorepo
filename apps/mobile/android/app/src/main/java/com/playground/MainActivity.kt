@@ -1,4 +1,4 @@
-package co.playground
+package com.playground
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

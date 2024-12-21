@@ -7,26 +7,27 @@
       "name": "start:web:chrome",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}/apps/web",
-      "preLaunchTask": "start:web"
+      "preLaunchTask": "web:start"
     },
     {
       "type": "reactnativedirect",
       "request": "launch",
-      "name": "start:mobile:ios",
+      "name": "run:mobile:ios",
       "platform": "ios",
-      "target": "iPhone 15",
+      "target": "simulator",
+      "runArguments": ["--simulator", "\"iPhone 16 Pro Max\""],
       "port": 9221,
       "cwd": "${workspaceFolder}/apps/mobile",
-      "preLaunchTask": "start:mobile"
+      "preLaunchTask": "ios:pod:force"
     },
     {
       "type": "reactnativedirect",
       "request": "launch",
-      "name": "start:mobile:android",
+      "name": "run:mobile:android",
       "platform": "android",
       "port": 8081,
       "cwd": "${workspaceFolder}/apps/mobile",
-      "preLaunchTask": "start:mobile"
+      "preLaunchTask": "android:clean"
     }
   ]
 }

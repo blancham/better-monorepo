@@ -3,7 +3,9 @@
   "tasks": [
     {
       "isBackground": true,
-      "label": "start:web",
+      "label": "web:start",
+      "type": "shell",
+      "command": "pnpm web start",
       "presentation": {
         "echo": false,
         "reveal": "never",
@@ -12,18 +14,30 @@
         "showReuseMessage": false,
         "clear": true
       },
-      "type": "shell",
-      "command": "pnpm --filter @playground/app-web start",
       "icon": {
-        "id": "debug-start",
+        "id": "code",
         "color": "terminal.ansiGreen"
       },
-      "problemMatcher": ["$tsc-watch"]
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": {
+          "regexp": "ready in.*"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "ready in.*",
+          "endsPattern": "ready in.*"
+        }
+      }
     },
     {
       "isBackground": true,
-      "label": "start:mobile",
+      "label": "ios:pod:force",
+      "type": "shell",
+      "command": "pnpm mobile ios:pod:force",
+      "group": "build",
       "presentation": {
+        "close": true,
         "echo": false,
         "reveal": "never",
         "focus": false,
@@ -31,13 +45,41 @@
         "showReuseMessage": false,
         "clear": true
       },
-      "type": "shell",
-      "command": "pnpm --filter @playground/app-mobile start",
       "icon": {
-        "id": "debug-start",
-        "color": "terminal.ansiGreen"
+        "id": "refresh",
+        "color": "terminal.ansiWhite"
       },
-      "problemMatcher": ["$tsc-watch"]
+      "problemMatcher": {
+        "owner": "pod",
+        "pattern": {
+          "regexp": "Pod installation complete!"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Pod installation complete!",
+          "endsPattern": "Pod installation complete!"
+        }
+      }
+    },
+    {
+      "isBackground": true,
+      "label": "android:clean",
+      "type": "shell",
+      "command": "pnpm mobile ios:pod:force",
+      "group": "build",
+      "presentation": {
+        "close": true,
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "icon": {
+        "id": "refresh",
+        "color": "terminal.ansiWhite"
+      }
     }
   ]
 }
